@@ -8,5 +8,16 @@
 {"timestamp":"2026-01-29T14:57:37.581Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
 {"timestamp":"2026-01-29T14:57:37.585Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
 {"timestamp":"2026-01-29T14:57:37.586Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.588Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T14:57:37.588Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
+{"timestamp":"2026-01-29T17:50:17.771Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
+{"timestamp":"2026-01-29T17:50:17.805Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
+{"timestamp":"2026-01-29T17:50:17.807Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"},
+{"timestamp":"2026-01-29T17:50:17.808Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
+{"timestamp":"2026-01-29T17:50:17.809Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
+{"timestamp":"2026-01-29T17:50:17.810Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"OPEN"},
+{"timestamp":"2026-01-29T17:50:17.811Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
+{"timestamp":"2026-01-29T17:50:17.812Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
+{"timestamp":"2026-01-29T17:50:17.813Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
+{"timestamp":"2026-01-29T17:50:17.814Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+
 ]
