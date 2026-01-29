@@ -7,7 +7,7 @@ export class CircuitBreaker {
 
   constructor(
     private readonly failureThreshold: number,
-    private readonly resetTimeoutMs: number
+    private readonly resetTimeoutMs: number,
   ) {}
 
   /** Check if a request is allowed */
@@ -27,6 +27,10 @@ export class CircuitBreaker {
   onSuccess(): void {
     this.failureCount = 0;
     this.state = "CLOSED";
+  }
+
+  public forceHalfOpen(): void {
+    this.state = "HALF_OPEN";
   }
 
   /** Call when a request fails */
