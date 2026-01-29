@@ -1,23 +1,22 @@
-[
-{"timestamp":"2026-01-29T14:57:37.494Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T14:57:37.559Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T14:57:37.576Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T14:57:37.577Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T14:57:37.578Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.580Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.581Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.585Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.586Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T14:57:37.588Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T17:50:17.771Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T17:50:17.805Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T17:50:17.807Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T17:50:17.808Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T17:50:17.809Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"},
-{"timestamp":"2026-01-29T17:50:17.810Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T17:50:17.811Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T17:50:17.812Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T17:50:17.813Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"},
-{"timestamp":"2026-01-29T17:50:17.814Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
-
-]
+{"timestamp":"2026-01-29T18:03:05.302Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:06.336Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:07.340Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:08.341Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:09.350Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:10.355Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:11.364Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:12.373Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:13.382Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:14.384Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:15.317Z","service":"ElevenLabs","message":"Health check passed — moving to HALF_OPEN","circuitState":"HALF_OPEN"}
+{"timestamp":"2026-01-29T18:03:15.393Z","service":"ElevenLabs","message":"Call succeeded","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:16.403Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:17.413Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"CLOSED"}
+{"timestamp":"2026-01-29T18:03:18.423Z","service":"ElevenLabs","message":"503 Service Unavailable","errorType":"Transient","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:19.436Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:20.441Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:21.441Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:22.458Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:23.465Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:24.476Z","service":"ElevenLabs","message":"Circuit breaker open — failing fast","circuitState":"OPEN"}
+{"timestamp":"2026-01-29T18:03:25.326Z","service":"ElevenLabs","message":"Health check passed — moving to HALF_OPEN","circuitState":"HALF_OPEN"}
