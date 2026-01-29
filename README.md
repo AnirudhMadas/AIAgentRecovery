@@ -1,5 +1,5 @@
-🧠 AI Call Agent – Error Recovery & Resilience System
-📌 Overview
+## 🧠 AI Call Agent – Error Recovery & Resilience System
+### 📌 Overview
 
 This project implements a robust error recovery and resilience system for an AI Call Agent that depends on external services such as ElevenLabs, LLM providers, and CRMs.
 
@@ -17,21 +17,24 @@ Continues operating gracefully
 
 This project was built as part of an Incubation Engineering Assignment, with a focus on engineering maturity and production-ready design, not just correctness.
 
-🏗️ Architecture Overview
-Call Processor
-   |
-   v
-Service Handler (ElevenLabs)
-   |
-   v
-Resilience Layer
-├── Error Categorization
-├── Retry Engine
-├── Circuit Breaker
-├── Health Checks
-├── Logging & Observability
-└── Alerting System
-Key Design Principles
+### 🏗️ Architecture Overview
+
+Call Processor ->  Service Handler (ElevenLabs) -> Resilience Layer
+
+   ├──    Error Categorization
+
+   ├──    Retry Engine
+
+   ├──    Circuit Breaker
+
+   ├──    Health Checks
+
+   ├──    Logging & Observability
+
+   └──    Alerting System
+
+### Key Design Principles
+
 
 Clear separation of concerns
 
@@ -43,7 +46,7 @@ Non-blocking, async operations
 
 Easy to extend and test
 
-❗ Error Categorization
+### ❗ Error Categorization
 
 Custom error hierarchy is used to differentiate failures:
 
@@ -54,7 +57,8 @@ Transient Errors
 Network timeouts
 
 Temporary outages
-→ Eligible for retry
+
+Eligible for retry
 
 Permanent Errors
 
@@ -63,7 +67,8 @@ Authentication failures
 Invalid payloads
 
 Quota exceeded
-→ No retries
+
+No retries
 
 Custom Errors
 
@@ -73,7 +78,7 @@ TransientError
 
 PermanentError
 
-🔁 Retry Logic (Exponential Backoff)
+### 🔁 Retry Logic (Exponential Backoff)
 
 Retry logic is:
 
@@ -84,13 +89,17 @@ Fully configurable
 Implemented without external libraries
 
 Retry Configuration
+
 initialDelayMs: 5000
+
 maxRetries: 3
+
 backoffMultiplier: 2
 
 Retries follow exponential backoff:
 
 5s → 10s → 20s
+
 🔌 Circuit Breaker Pattern
 
 Each external service has its own circuit breaker.
@@ -111,7 +120,7 @@ Prevents unnecessary retries when service is down
 
 Automatically recovers when service becomes healthy
 
-📊 Logging & Observability
+### 📊 Logging & Observability
 
 Structured logging is implemented with multiple sinks.
 
@@ -137,7 +146,7 @@ Circuit breaker state
 
 Logs are non-blocking and structured for easy debugging.
 
-🚨 Alerting System
+### 🚨 Alerting System
 
 Alerts notify humans when critical failures occur.
 
@@ -161,7 +170,7 @@ Dependency remains unavailable
 
 Alerts are fired only on state transitions to avoid alert fatigue.
 
-🩺 Health Checks & Automatic Recovery
+### 🩺 Health Checks & Automatic Recovery
 
 Health checks run periodically in the background, even when the circuit is OPEN.
 
@@ -183,48 +192,69 @@ Failure → circuit OPEN
 
 This enables automatic recovery without manual intervention.
 
-🎯 Required Scenario Handling (Verified)
+### 🎯 Required Scenario Handling (Verified)
 
 Scenario: ElevenLabs returns 503 Service Unavailable
 
 ✔ Detected as a transient error
+
 ✔ Retried with exponential backoff
+
 ✔ Retries limited to 3 attempts
+
 ✔ Circuit breaker opens after failures
+
 ✔ Alerts triggered for OPEN state
+
 ✔ Calls fail fast while OPEN
+
 ✔ Health checks recover the service
+
 ✔ Call processing resumes automatically
 
-📂 Project Structure
+### 📂 Project Structure
+
 src/
+
 ├── alerts/          # Email, Telegram, Webhook alerts
+
 ├── config/          # Retry configuration
+
 ├── errors/          # Custom error hierarchy
+
 ├── logging/         # File + Google Sheets logging
+
 ├── resilience/      # Retry, circuit breaker, health checks
+
 ├── services/        # ElevenLabs client & handler
+
 ├── queue/           # (Optional) Call queue logic
+
 └── index.ts         # Application entry point
+
 ▶️ Running the Project
-Install dependencies
-npm install
-Run the simulation
-npx ts-node src/index.ts
+
+   Install dependencies
+
+   npm install
+
+   Run the simulation
+
+   npx ts-node src/index.ts
 
 The console output will demonstrate:
 
-Retries
+   Retries
 
-Circuit breaker opening
+   Circuit breaker opening
 
-Alerts firing
+   Alerts firing
 
-Health check recovery
+   Health check recovery
+   
+   Automatic resumption of calls
 
-Automatic resumption of calls
-
-🧪 Testing Strategy
+### 🧪 Testing Strategy
 
 External services are mocked to simulate:
 
@@ -236,7 +266,7 @@ Intermittent availability
 
 This allows deterministic testing of resilience behavior.
 
-🧠 Key Engineering Learnings
+### 🧠 Key Engineering Learnings
 
 Retries alone are dangerous without circuit breakers
 
@@ -248,7 +278,7 @@ Health checks are essential for self-healing systems
 
 Clean abstractions improve reliability and maintainability
 
-🚀 Future Improvements
+### 🚀 Future Improvements
 
 Real Google Sheets integration
 
@@ -260,7 +290,7 @@ Metrics dashboard (Prometheus / Grafana)
 
 Unit tests for resilience components
 
-👤 Author
+### 👤 Author
 
 Anirudh Madas
 Backend / Full-Stack Developer
