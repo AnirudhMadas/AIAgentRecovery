@@ -1,4 +1,4 @@
-import { processElevenLabsCall } from "./services/elevenLabshandler";
+import { processElevenLabsCall } from "./services/elevenLabsHandler";
 
 async function main() {
   for (let i = 0; i < 10; i++) {
