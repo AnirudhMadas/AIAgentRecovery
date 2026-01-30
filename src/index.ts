@@ -13,7 +13,7 @@ const healthChecker = new HealthCheckScheduler(
 healthChecker.start();
 
 async function main() {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 10; i++) {
     try {
       await processElevenLabsCall();
     } catch (err) {

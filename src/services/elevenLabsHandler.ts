@@ -8,7 +8,7 @@ import { alertManager } from "../alerts";
 
 export async function processElevenLabsCall(): Promise<void> {
 
-  // 1️⃣ Fail fast if circuit is already OPEN
+  //  Fail fast if circuit is already OPEN
   if (!elevenLabsCircuitBreaker.canRequest()) {
     await logger.log({
       timestamp: new Date().toISOString(),
@@ -21,14 +21,14 @@ export async function processElevenLabsCall(): Promise<void> {
   }
 
   try {
-    // 2️⃣ Try calling ElevenLabs with retry
+    //  Try calling ElevenLabs with retry
     await retry(
       () => callElevenLabs(),
       new Error("ElevenLabs failure") as BaseError,
       retryConfig
     );
 
-    // 3️⃣ Success → reset circuit breaker
+    //  Success → reset circuit breaker
     elevenLabsCircuitBreaker.onSuccess();
 
     await logger.log({
@@ -39,27 +39,27 @@ export async function processElevenLabsCall(): Promise<void> {
     });
 
   } catch (err) {
-    // 4️⃣ Failure → record failure
+    //  Failure → record failure
     elevenLabsCircuitBreaker.onFailure();
 
     const error = err as BaseError;
     const circuitState = elevenLabsCircuitBreaker.getState();
 
-    // 5️⃣ ALERT ONLY when circuit transitions to OPEN
+    //  ALERT ONLY when circuit transitions to OPEN
     if (circuitState === "OPEN") {
       await alertManager.notify(
-        "🚨 Circuit breaker OPEN for ElevenLabs"
+        "Circuit breaker OPEN for ElevenLabs"
       );
     }
 
-    // 6️⃣ Alert on permanent failures (if any)
+    //  Alert on permanent failures (if any)
     if (!error.retryable) {
       await alertManager.notify(
-        `❌ Permanent failure in ElevenLabs: ${error.message}`
+        `Permanent failure in ElevenLabs: ${error.message}`
       );
     }
 
-    // 7️⃣ Log the failure
+    //  Log the failure
     await logger.log({
       timestamp: new Date().toISOString(),
       service: "ElevenLabs",

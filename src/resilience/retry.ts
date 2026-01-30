@@ -22,7 +22,7 @@ export async function retry<T>(
         throw err;
       }
 
-      console.log(`🔁 Retry ${attempt} after ${delay}ms`);
+      console.log(`Retry ${attempt} after ${delay}ms`);
       await new Promise(res => setTimeout(res, delay));
       delay *= config.backoffMultiplier;
     }
